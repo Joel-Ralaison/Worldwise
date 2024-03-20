@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+/*
 :root {
   --foreground-rgb: 15, 15, 20;
   --background-rgb: 214, 219, 220;
@@ -24,3 +25,4 @@ body {
     text-wrap: balance;
   }
 }
+*/
