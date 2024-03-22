@@ -8,7 +8,7 @@ const links = [
 
 export default function DesktopMenu() {
   return (
-    <article className="mx-auto hidden h-12 justify-between overflow-hidden rounded-lg bg-black/45 text-white shadow-md shadow-black/15 backdrop-blur-md transition-all duration-500 hover:bg-black/55 md:flex md:w-[50vw]">
+    <article className="mx-auto hidden h-12 justify-between overflow-hidden rounded-lg bg-black/40 text-white shadow-md shadow-black/15 backdrop-blur-md transition-all duration-500 hover:bg-black/50 md:flex md:w-[50vw]">
       <div className="flex justify-center">
         <Link href="/" className="flex h-full w-full items-center px-5">
           Home

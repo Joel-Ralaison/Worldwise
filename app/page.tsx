@@ -26,12 +26,13 @@ export default function HomePage() {
         <div className="flex w-full justify-center">
           <Link
             href="/login"
-            className="rounded-lg bg-gradient-to-tr from-teal-500 to-emerald-500 px-6 py-3 text-lg font-bold text-zinc-900 transition-all hover:from-teal-600 hover:to-emerald-600"
+            className="rounded-lg bg-gradient-to-r from-neutral-200 to-neutral-400 px-6 py-3 text-lg font-bold text-zinc-900 transition-colors duration-500 hover:from-emerald-500 hover:to-teal-500"
           >
             START TRACKING NOW
           </Link>
         </div>
       </section>
+
       <BodyBackground imgSrc={bgHome} />
     </main>
   );
