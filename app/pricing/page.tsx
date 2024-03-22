@@ -1,6 +1,6 @@
-import BodyBackground from "@/components/Reusables/BodyBackground";
 import { img2 } from "@/constants/images";
 import Image from "next/image";
+import BodyBackground from "@/components/Reusables/BodyBackground";
 
 export default function PricingPage() {
   return (

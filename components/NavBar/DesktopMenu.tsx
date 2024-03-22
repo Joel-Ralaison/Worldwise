@@ -3,12 +3,12 @@ import Link from "next/link";
 const links = [
   { name: "Pricing", href: "pricing" },
   { name: "Product", href: "product" },
-  { name: "App", href: "application" },
+  { name: "Map", href: "application" },
 ];
 
 export default function DesktopMenu() {
   return (
-    <article className="mx-auto hidden h-12 justify-between overflow-hidden rounded-lg bg-teal-500 shadow-md shadow-black/10 md:flex md:w-[50vw] lg:w-[40vw]">
+    <article className="mx-auto hidden h-12 justify-between overflow-hidden rounded-lg bg-black/45 text-white shadow-md shadow-black/15 backdrop-blur-md transition-all duration-500 hover:bg-black/55 md:flex md:w-[50vw]">
       <div className="flex justify-center">
         <Link href="/" className="flex h-full w-full items-center px-5">
           Home
