@@ -13,11 +13,11 @@ export default function AddCity() {
   return (
     <button
       type="button"
-      className="flex h-[45px] w-[100px] items-center gap-2 rounded-lg bg-black/65 px-4 py-2"
+      className="flex h-[45px] max-w-[100px] items-center gap-2 rounded-lg bg-black/65 px-4 py-2"
       onClick={handleClick}
     >
       <h4 className="font-semibold text-white">Add</h4>
-      <MdAddCircle fontSize={22} fill="white" />
+      <MdAddCircle fontSize={22} fill="white" className="hidden md:block" />
     </button>
   );
 }

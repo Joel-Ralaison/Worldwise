@@ -4,11 +4,11 @@ import Link from "next/link";
 
 export default function HomePage() {
   return (
-    <main className="h-screen w-screen font-sans text-zinc-100">
-      <section className="inset-0 flex h-full w-full flex-col items-start justify-around pt-12">
-        <div className="flex flex-col gap-[6vh] pl-[20vw]">
-          <h1 className="flex flex-col gap-2">
-            <span className="bg-gradient-to-r from-teal-300 to-emerald-200 bg-clip-text text-5xl font-bold text-transparent">
+    <main className="h-svh w-svw font-sans text-zinc-100">
+      <section className="flex h-full w-full flex-col items-center justify-center pt-8 md:pt-0">
+        <div className="flex h-fit flex-col gap-[3vh] overflow-auto px-8">
+          <h1 className="flex flex-col gap-6">
+            <span className="bg-gradient-to-r from-teal-300 to-emerald-200 bg-clip-text text-4xl font-bold text-transparent">
               You travel the world.
             </span>
             <span className="text-xl text-white">
@@ -16,10 +16,14 @@ export default function HomePage() {
             </span>
           </h1>
 
-          <p className="w-[70%] max-w-[800px] pl-4 text-lg">
+          <p className="mx-auto w-full max-w-[800px] pb-10 pt-6 text-lg text-zinc-300">
             A world map that tracks your footsteps into every city you can think
             of. Never forget your wonderful experiences, and show your friends
-            how you have wandered the world.
+            how you have wandered the world. Let WorldWise be your compass,
+            guiding you to new horizons and unforgettable experiences. Imagine a
+            world where every destination is at your fingertips, where each city
+            you visit becomes a cherished memory etched into the fabric of your
+            life. With WorldWise, this dream becomes a reality.
           </p>
         </div>
 

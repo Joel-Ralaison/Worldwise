@@ -7,17 +7,21 @@ export default function PricingPage() {
     <main className="flex items-center justify-center pt-[20vh]">
       <section className="w-[60%] md:w-[40%] md:max-w-[450px]">
         <div className="text-zinc-100">
-          <h2 className="flex w-full flex-col gap-2 text-3xl md:flex-row">
-            <span className="">Pricing</span>
+          <h2 className="text-3xl font-bold text-teal-200">PRICING</h2>
+
+          <p className="mt-4 flex  w-full flex-col gap-2 text-2xl md:flex-row">
             <span className="">
-              | Just <strong className="text-teal-200">$9</strong>/year
+              Embark on your global journey for just{" "}
+              <strong className="text-teal-200">$9</strong>/year
             </span>
-          </h2>
+          </p>
 
           <p className="mt-8 text-lg">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vitae vel
-            labore mollitia iusto. Recusandae quos provident, laboriosam fugit
-            voluptatem iste.
+            Explore the world with ease as WorldWise meticulously records your
+            travels. With our interactive world map, trace your path through
+            countless cities and cherish every memorable moment. Share your
+            wanderlust tales with friends and relive the magic of your
+            adventures.
           </p>
         </div>
       </section>

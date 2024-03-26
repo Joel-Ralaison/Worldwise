@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-//* Menu Show / Hide
+// Menu Show / Hide
 type cityManagerMenuType = {
   managerOpen: boolean;
   managerToogle: () => void;
@@ -11,7 +11,7 @@ export const useCityManagerStore = create<cityManagerMenuType>((set) => ({
   managerToogle: () => set((state) => ({ managerOpen: !state.managerOpen })),
 }));
 
-//* Current Action
+// Current Action
 type options = "add" | "list";
 
 type activeActionType = {

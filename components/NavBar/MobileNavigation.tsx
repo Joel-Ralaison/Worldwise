@@ -20,7 +20,7 @@ export default function MobileNavigation() {
     <>
       <nav
         className={clsx(
-          "fixed top-0 z-[19] h-full w-[60vw] bg-teal-700 pt-20 transition-all duration-500",
+          "fixed top-0 z-20 h-full w-[60vw] bg-teal-700 pt-14 transition-all duration-500",
           show ? "right-0" : "-right-[65vw]",
           "flex flex-col items-center",
         )}
@@ -31,16 +31,16 @@ export default function MobileNavigation() {
             href={link.href}
             onClick={() => toogle()}
             className={clsx(
-              "w-[100%] py-2 pl-[20vw] text-2xl text-white transition-all duration-150 hover:scale-110 hover:pl-[22vw]",
+              "w-[100%] py-2 pl-[20vw] text-lg text-white transition-all duration-150 hover:scale-110 hover:pl-[22vw] md:text-2xl",
             )}
           >
             {link.name}
           </Link>
         ))}
 
-        <div className="absolute bottom-0 left-0 flex h-[50px] w-[60vw] items-center justify-center gap-5 bg-teal-600 text-white">
-          <span>Theme</span>
-          <span>Color</span>
+        <div className="absolute bottom-0 left-0 flex h-[50px] w-[60vw] items-center justify-center gap-1 bg-teal-600 text-white">
+          <span>Thank You</span>
+          <span>for your Visit!</span>
         </div>
       </nav>
 
