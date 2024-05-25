@@ -1,6 +1,6 @@
 "use client";
 
-import { useCityManagerStore } from "@/utils/cityManagerStore";
+import { useCityManagerStore } from "@/stores/cityManagerStore";
 
 import AddCity from "@/components/CityManager/AddCity";
 import Cities from "@/components/CityManager/Cities";

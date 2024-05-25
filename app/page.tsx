@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <main className="h-svh w-svw font-sans text-zinc-100">
-      <section className="flex h-full w-full flex-col items-center justify-center pt-8 md:pt-0">
+      <section className="flex h-full w-full flex-col items-center justify-between pb-8 pt-20">
         <div className="flex h-fit flex-col gap-[3vh] overflow-auto px-8">
           <h1 className="flex flex-col gap-6">
             <span className="bg-gradient-to-r from-teal-300 to-emerald-200 bg-clip-text text-4xl font-bold text-transparent">
@@ -16,7 +16,7 @@ export default function HomePage() {
             </span>
           </h1>
 
-          <p className="mx-auto w-full max-w-[800px] pb-10 pt-6 text-lg text-zinc-300">
+          <p className="mx-auto w-full max-w-[800px] pb-10 text-xl text-zinc-200 max-md:text-base">
             A world map that tracks your footsteps into every city you can think
             of. Never forget your wonderful experiences, and show your friends
             how you have wandered the world. Let WorldWise be your compass,

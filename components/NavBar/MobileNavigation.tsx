@@ -1,6 +1,10 @@
 "use client";
 
-import { useMobileMenuStore } from "@/utils/menuStore";
+import {
+  useActiveActionStore,
+  useCityManagerStore,
+} from "@/stores/cityManagerStore";
+import { useMobileMenuStore } from "@/stores/menuStore";
 import clsx from "clsx";
 import Link from "next/link";
 
@@ -29,7 +33,11 @@ export default function MobileNavigation() {
           <Link
             key={link.href}
             href={link.href}
-            onClick={() => toogle()}
+            onClick={() => {
+              toogle();
+              useCityManagerStore.getState().managerReset();
+              useActiveActionStore.getState().actionReset();
+            }}
             className={clsx(
               "w-[100%] py-2 pl-[20vw] text-lg text-white transition-all duration-150 hover:scale-110 hover:pl-[22vw] md:text-2xl",
             )}

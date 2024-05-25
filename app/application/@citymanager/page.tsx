@@ -1,6 +1,6 @@
 "use client";
 
-import { useCityManagerStore } from "@/utils/cityManagerStore";
+import { useCityManagerStore } from "@/stores/cityManagerStore";
 import clsx from "clsx";
 
 import ManageActions from "@/components/CityManager/ManageActions";

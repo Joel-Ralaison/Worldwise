@@ -3,7 +3,11 @@
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { logo } from "@/constants/images";
-import { useMobileMenuStore } from "@/utils/menuStore";
+import { useMobileMenuStore } from "@/stores/menuStore";
+import {
+  useActiveActionStore,
+  useCityManagerStore,
+} from "@/stores/cityManagerStore";
 
 export default function Logo() {
   const router = useRouter();
@@ -12,6 +16,9 @@ export default function Logo() {
   function handleClick() {
     hideMobileMenu();
     router.push("/");
+
+    useCityManagerStore.getState().managerReset();
+    useActiveActionStore.getState().actionReset();
   }
 
   return (

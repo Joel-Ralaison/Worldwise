@@ -1,6 +1,6 @@
 "use client";
 
-import { useMobileMenuStore } from "@/utils/menuStore";
+import { useMobileMenuStore } from "@/stores/menuStore";
 import clsx from "clsx";
 
 export default function MobileHamburger() {

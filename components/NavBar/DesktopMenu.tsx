@@ -1,3 +1,9 @@
+"use client";
+
+import {
+  useActiveActionStore,
+  useCityManagerStore,
+} from "@/stores/cityManagerStore";
 import Link from "next/link";
 
 const links = [
@@ -10,7 +16,14 @@ export default function DesktopMenu() {
   return (
     <article className="mx-auto hidden h-12 justify-between overflow-hidden rounded-lg bg-black/40 text-white shadow-md shadow-black/15 backdrop-blur-md transition-all duration-500 hover:bg-black/50 md:flex md:w-[50vw]">
       <div className="flex justify-center">
-        <Link href="/" className="flex h-full w-full items-center px-5">
+        <Link
+          href="/"
+          className="flex h-full w-full items-center px-5"
+          onClick={() => {
+            useCityManagerStore.getState().managerReset();
+            useActiveActionStore.getState().actionReset();
+          }}
+        >
           Home
         </Link>
       </div>
@@ -21,6 +34,10 @@ export default function DesktopMenu() {
             key={link.href}
             href={link.href}
             className="flex h-full w-full items-center rounded-lg px-5"
+            onClick={() => {
+              useCityManagerStore.getState().managerReset();
+              useActiveActionStore.getState().actionReset();
+            }}
           >
             {link.name}
           </Link>
@@ -31,6 +48,10 @@ export default function DesktopMenu() {
         <Link
           href="login"
           className="flex h-full w-full items-center rounded-lg px-5"
+          onClick={() => {
+            useCityManagerStore.getState().managerReset();
+            useActiveActionStore.getState().actionReset();
+          }}
         >
           Login
         </Link>

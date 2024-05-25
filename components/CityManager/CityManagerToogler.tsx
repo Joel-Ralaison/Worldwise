@@ -1,6 +1,6 @@
 "use client";
 
-import { useCityManagerStore } from "@/utils/cityManagerStore";
+import { useCityManagerStore } from "@/stores/cityManagerStore";
 import { BsMapFill, BsFillArrowDownRightSquareFill } from "react-icons/bs";
 
 export function ShowCityManager() {
