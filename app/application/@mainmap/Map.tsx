@@ -1,10 +1,10 @@
 "use client";
 
-import { useRouter } from "next/navigation";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import "leaflet-defaulticon-compatibility";
 import "leaflet/dist/leaflet.css";
 import "leaflet-defaulticon-compatibility/dist/leaflet-defaulticon-compatibility.css";
+import { LatLngExpression, LeafletMouseEvent } from "leaflet";
 import {
   MapContainer,
   Marker,
@@ -14,16 +14,17 @@ import {
   useMapEvent,
   ZoomControl,
 } from "react-leaflet";
-import { LeafletMouseEvent } from "leaflet";
+
+const BASE_URL = "https://api.bigdatacloud.net/data/reverse-geocode-client";
 
 export default function Map() {
-  const [mapPosition, setMapPosition] = useState<[number, number]>([
+  const [mapPosition, setMapPosition] = useState<LatLngExpression>([
     51.505, -0.09,
   ]);
 
   return (
     <MapContainer
-      center={[51.505, -0.09]}
+      center={mapPosition}
       zoom={13}
       scrollWheelZoom={true}
       className="z-10 h-full w-full overflow-hidden border-none outline-none"
@@ -34,7 +35,7 @@ export default function Map() {
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
 
-      <Marker position={[51.505, -0.09]}>
+      <Marker position={mapPosition}>
         <Popup>
           {"City"}
           <br />
@@ -44,24 +45,23 @@ export default function Map() {
 
       <ZoomControl position="bottomleft" />
 
-      <CenterMap position={[51.505, -0.09]} />
+      <CenterMap position={mapPosition} />
       <DetectClick />
     </MapContainer>
   );
 }
 
-function CenterMap(props: { position: [number, number] }) {
+function CenterMap(props: { position: LatLngExpression }) {
   const map = useMap();
   map.setView(props.position);
   return null;
 }
 
 function DetectClick() {
-  const router = useRouter();
-
   useMapEvent("click", (e: LeafletMouseEvent) => {
-    router.push(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
+    console.log("latitude detected : ", e.latlng.lat);
+    console.log("longitude detected : ", e.latlng.lng);
+    fetch(`${BASE_URL}?latitude=${e.latlng.lat}&longitude=${e.latlng.lng}`);
   });
-
   return null;
 }
