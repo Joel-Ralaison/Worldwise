@@ -1,12 +1,12 @@
 "use client";
 
 import { useActiveActionStore } from "@/stores/cityManagerStore";
-import { useSearchStrore } from "@/stores/searchStore";
+import { useSearchStore } from "@/stores/searchStore";
 import { MdAddCircle } from "react-icons/md";
 
 export default function AddCity() {
   const setAction = useActiveActionStore((store) => store.setAction);
-  const setShowSearch = useSearchStrore((store) => store.setShowSearch);
+  const setShowSearch = useSearchStore((store) => store.setShowSearch);
 
   function handleClick() {
     setAction("add");
