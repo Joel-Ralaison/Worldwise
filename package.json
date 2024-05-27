@@ -4,9 +4,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:turbo": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "server": "json-server ./fakeData/data.json --port 1234 --watch"
   },
   "dependencies": {
     "@types/react-scroll": "^1.8.10",

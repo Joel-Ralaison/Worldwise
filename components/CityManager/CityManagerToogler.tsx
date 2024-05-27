@@ -1,6 +1,6 @@
 "use client";
 
-import { useCityManagerStore } from "@/utils/cityManagerStore";
+import { useCityManagerStore } from "@/stores/cityManagerStore";
 import { BsMapFill, BsFillArrowDownRightSquareFill } from "react-icons/bs";
 
 export function ShowCityManager() {
@@ -24,10 +24,10 @@ export function HideCityManager() {
     <button
       type="button"
       title="close"
-      className="absolute right-0 flex h-[45px] w-[100px] items-center justify-between gap-2 rounded-lg bg-black/65 px-4 py-2"
+      className="absolute right-0 flex h-[45px] max-w-[100px] items-center justify-between gap-2 rounded-lg bg-black/65 px-4 py-2"
       onClick={() => managerToogle()}
     >
-      <span className="font-semibold text-white">Close</span>
+      <span className="hidden font-semibold text-white md:block">Close</span>
       <BsFillArrowDownRightSquareFill fontSize={25} fill="white" />
     </button>
   );

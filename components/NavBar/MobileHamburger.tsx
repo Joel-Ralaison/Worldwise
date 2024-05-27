@@ -1,6 +1,6 @@
 "use client";
 
-import { useMobileMenuStore } from "@/utils/menuStore";
+import { useMobileMenuStore } from "@/stores/menuStore";
 import clsx from "clsx";
 
 export default function MobileHamburger() {
@@ -14,7 +14,7 @@ export default function MobileHamburger() {
   return (
     <article
       className={clsx(
-        "group z-20 flex cursor-pointer flex-col gap-1 rounded-lg  p-3 backdrop-blur-sm transition-colors duration-500",
+        "group z-30 flex cursor-pointer flex-col gap-1 rounded-lg  p-3 backdrop-blur-sm transition-colors duration-500",
         open
           ? "hover:bg-transparen bg-transparent"
           : "bg-black/15 hover:bg-black/20",
