@@ -57,10 +57,10 @@ function CenterMap(props: { position: [number, number] }) {
 }
 
 function DetectClick() {
-  const router = useRouter();
-
   useMapEvent("click", (e: LeafletMouseEvent) => {
-    router.push(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
+    // router.push(`form?lat=${e.latlng.lat}&lng=${e.latlng.lng}`);
+    console.log(e.latlng.lat);
+    console.log(e.latlng.lng);
   });
 
   return null;
