@@ -1,12 +1,12 @@
 "use client";
 
 import { useActiveActionStore } from "@/stores/cityManagerStore";
-import { useSearchStrore } from "@/stores/searchStore";
+import { useSearchStore } from "@/stores/searchStore";
 import { BsBuildingsFill } from "react-icons/bs";
 
 export default function Cities() {
   const setAction = useActiveActionStore((store) => store.setAction);
-  const setShowSearch = useSearchStrore((store) => store.setShowSearch);
+  const setShowSearch = useSearchStore((store) => store.setShowSearch);
 
   function handleClick() {
     setAction("list");
