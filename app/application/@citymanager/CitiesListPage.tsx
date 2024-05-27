@@ -1,14 +1,14 @@
 "use client";
 
 import { useCitiesDataStore } from "@/stores/citiesDataStore";
-import { useSearchStrore } from "@/stores/searchStore";
+import { useSearchStore } from "@/stores/searchStore";
 import { useEffect, useRef, useState } from "react";
 
 export default function CitiesListPage() {
   const citiesData = useCitiesDataStore((store) => store.citiesData);
   const deleteCity = useCitiesDataStore((store) => store.deleteCity);
-  const setShowSearch = useSearchStrore((store) => store.setShowSearch);
-  const setSearch = useSearchStrore((store) => store.setCurrentSearch);
+  const setShowSearch = useSearchStore((store) => store.setShowSearch);
+  const setSearch = useSearchStore((store) => store.setCurrentSearch);
 
   const inputRef = useRef<HTMLInputElement>(null);
   const [filterValue, setFilterValue] = useState<string>("");

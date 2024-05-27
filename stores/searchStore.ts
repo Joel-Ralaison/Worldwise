@@ -7,7 +7,7 @@ type Search = {
   setShowSearch: (value: boolean) => void;
 };
 
-export const useSearchStrore = create<Search>((set) => ({
+export const useSearchStore = create<Search>((set) => ({
   currentSearch: "",
   showSearch: false,
   setCurrentSearch: (newSearch: string) => set({ currentSearch: newSearch }),

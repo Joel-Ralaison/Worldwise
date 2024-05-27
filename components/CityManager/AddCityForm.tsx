@@ -1,19 +1,18 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { useSearchStrore } from "@/stores/searchStore";
+import { ChangeEvent, useEffect, useRef } from "react";
+import { useSearchStore } from "@/stores/searchStore";
 import { clsx } from "clsx";
 import { useActiveCity } from "@/stores/citiesDataStore";
 
-const API_KEY = "eead9f0bcaa1fd7ab52ef11e3f4f7bc1";
 const OPENWEATHER_URL = "https://api.openweathermap.org/geo/1.0/direct";
 
 export default function AddCityForm() {
-  const inputRef = useRef<HTMLInputElement | null>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
 
-  const search = useSearchStrore((store) => store.currentSearch);
-  const setSearch = useSearchStrore((store) => store.setCurrentSearch);
-  const setShowSearch = useSearchStrore((store) => store.setShowSearch);
+  const search = useSearchStore((store) => store.currentSearch);
+  const setSearch = useSearchStore((store) => store.setCurrentSearch);
+  const setShowSearch = useSearchStore((store) => store.setShowSearch);
   const setActiveCity = useActiveCity((store) => store.setActiveCity);
 
   useEffect(() => {
@@ -21,6 +20,7 @@ export default function AddCityForm() {
   }, []);
 
   async function getPosition() {
+    const API_KEY = process.env.NEXT_PUBLIC_API_KEY;
     const locationRes = await fetch(
       `${OPENWEATHER_URL}?q=${search}&appid=${API_KEY}`,
     );
@@ -51,7 +51,7 @@ export default function AddCityForm() {
           className="h-full w-full flex-1  bg-clip-text pl-2 text-lg text-zinc-50 placeholder-zinc-300 caret-white outline-none placeholder:font-normal lg:text-xl 2xl:text-2xl"
           ref={inputRef}
           value={search}
-          onChange={(e) => {
+          onChange={(e: ChangeEvent<HTMLInputElement>) => {
             getPosition();
             setSearch(e.target.value);
           }}

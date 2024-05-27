@@ -8,12 +8,12 @@ import {
 import AddCityPage from "./AddCityPage";
 import CitiesListPage from "./CitiesListPage";
 import CityItem from "@/components/CityManager/CityItem";
-import { useSearchStrore } from "@/stores/searchStore";
+import { useSearchStore } from "@/stores/searchStore";
 
 export default function ContentAction() {
   const managerOpen = useCityManagerStore((store) => store.managerOpen);
   const action = useActiveActionStore((store) => store.action);
-  const showSearch = useSearchStrore((store) => store.showSearch);
+  const showSearch = useSearchStore((store) => store.showSearch);
 
   if (!managerOpen) return <></>;
 
